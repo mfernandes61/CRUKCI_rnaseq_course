@@ -1,8 +1,7 @@
 FROM bioconductor/release_base
 MAINTAINER Mark Fernandes<mark.fernandes@cruk.cam.ac.uk>
 RUN rm -rf /var/lib/apt/lists/*
-RUN apt-get update 
-RUN apt-get install --fix-missing -y git
+RUN apt-get update && apt-get install --fix-missing -y git
 ###Get repository of the course. Install data and R packages
 #RUN apt-get install -y sra-toolkit
 RUN mkdir -p /home/participant/
